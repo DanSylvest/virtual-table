@@ -4,7 +4,7 @@ import {
 } from 'react';
 import { RowData, SortOrder } from 'src/types';
 import {
-	GEN_TYPE, TEST_ACCESS_TOKEN, TEST_TEMPLATE_LINK, UID_PROP,
+	GEN_TYPE, MAX_ROWS, MIN_ROWS, TEST_ACCESS_TOKEN, TEST_TEMPLATE_LINK, UID_PROP,
 } from 'src/constants';
 import { sortFunc } from 'src/helpers/sortFunc';
 import { randomUsers } from 'src/utils/dataGen';
@@ -28,8 +28,8 @@ const useProviderData = () => {
 	const state = useRef<StateData>({
 		templateLink: localStorage.getItem('template') || TEST_TEMPLATE_LINK,
 		templateAPI: localStorage.getItem('api') || TEST_ACCESS_TOKEN,
-		min: parseInt(localStorage.getItem('min') ?? '', 10) || 5,
-		max: parseInt(localStorage.getItem('max') ?? '', 10) || 100,
+		min: parseInt(localStorage.getItem('min') ?? '', 10) || MIN_ROWS,
+		max: parseInt(localStorage.getItem('max') ?? '', 10) || MAX_ROWS,
 		data: [],
 		dataTree: new Map(),
 		sortCol: 'age',

@@ -16,3 +16,6 @@ export enum VALUE_TYPES {
     number,
     bool,
 }
+
+export const MIN_ROWS = 5;
+export const MAX_ROWS = 25;

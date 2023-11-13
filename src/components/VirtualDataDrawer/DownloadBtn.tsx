@@ -20,7 +20,7 @@ export const DownloadBtn = () => {
 						generate(GEN_TYPE.upload, jsonData);
 					}
 				} catch (error) {
-					console.error('Ошибка при разборе JSON:', error);
+					// do nothing
 				}
 			};
 			reader.readAsText(file);
