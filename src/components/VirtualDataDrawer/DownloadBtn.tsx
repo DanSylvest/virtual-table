@@ -17,7 +17,7 @@ export const DownloadBtn = () => {
 				try {
 					if (typeof content === 'string') {
 						const jsonData = JSON.parse(content);
-						generate(GEN_TYPE.upload, jsonData);
+						Array.isArray(jsonData) && generate(GEN_TYPE.upload, jsonData);
 					}
 				} catch (error) {
 					// do nothing
