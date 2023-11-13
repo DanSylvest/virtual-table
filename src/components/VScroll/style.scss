@@ -1,0 +1,25 @@
+.scroll-root {
+  position: relative;
+  right: 0;
+  height: 100%;
+  width: auto;
+  min-width: 600px;
+  user-select: none;
+
+  &:hover > .handler {
+    background-color: rgba(155,155,155,.7);
+  }
+
+  .handler {
+    transition: background-color 200ms;
+    top: 0;
+    right: 0;
+    position: absolute;
+    width: 8px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: rgba(155,155,155,.1);
+    cursor: pointer;
+    user-select: none;
+  }
+}

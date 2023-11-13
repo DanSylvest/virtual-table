@@ -1,0 +1,13 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  & > * {
+    position: relative;
+    max-width: 60%;
+    min-width: 60%;
+    height: 80%;
+  }
+}
